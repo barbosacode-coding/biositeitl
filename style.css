@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --cor-azul-escuro: #002049;
+    --cor-azul: #008CFF;
+}
+
+body{
+    font-family:'Noto Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #a0b0bd;
+}
+
+.banner img{
+    background-color: white;
+    border-radius: 100%;
+    height: 14dvh;
+    border: 4px solid var(--cor-azul);
+}
+
+.banner::before{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+    background-color: var(--cor-azul-escuro);
+}
+
+.banner{
+    background-position: 0px 610px;
+    width: 100%;
+    height: 18dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(/img/pexels-peaky-29445974.jpg);
+    opacity: 0.9;
+    box-shadow: 2px 3px 0px 2px rgba(0,0,0,0.2);
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 0;
+}
+
+.bt{
+    background-color: var(--cor-azul);
+    color: white;
+    height: 4dvh;
+    width: 600px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+}
+.bt a{
+    color: white;
+    text-decoration: none;
+}
+
+.bt:hover{
+    background-color: #006cc5;
+}
+
+.mapa-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.mapa{
+    width: 600px;
+    height: 450px;
+    border: 4px solid var(--cor-azul);
+    box-shadow: 7px 6px 0px 0px rgba(0,0,0,0.1);
+}
+
+.cred{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    padding: 20px;
+}
+
+.cred img{
+    height: 6dvh;
+}
+
+.cred p{
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .banner{
+        height: 25dvh;
+    }
+    
+    .links{
+        width: 100%;
+    }
+    
+    .bt{
+        width: 90vw;
+        margin: 4px;
+    }
+    
+    .mapa{
+        width: 90vw;
+        height: 300px;
+    }
+    
+    .cred{
+        flex-direction: column;
+        gap: 0px;
+        width: 100%;
+    }
+    
+    .cred img{
+        height: 8dvh;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner{
+        height: 22dvh;
+    }
+    
+    .banner img{
+        height: 10dvh;
+    }
+    
+    .bt{
+        width: 95vw;
+    }
+    
+    .mapa{
+        width: 95vw;
+        height: 250px;
+    }
+}
