@@ -72,6 +72,7 @@ body{
     cursor: pointer;
     border: none;
     border-radius: 12px;
+    text-decoration: none;
 }
 .bt a{
     color: white;
